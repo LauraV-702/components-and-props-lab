@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Recipe = ({ name, ingredients, instructions }) => {
   return (
     <div>
@@ -13,7 +12,6 @@ const Recipe = ({ name, ingredients, instructions }) => {
           <li key={index}>{ingredient}</li>
         ))}
       </ul>
-
 
       <h4>Instructions:</h4>
       <ol>
