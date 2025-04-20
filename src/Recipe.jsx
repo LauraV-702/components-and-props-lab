@@ -1,12 +1,17 @@
 import React from 'react';
+// Import Material UI components
 import { Card,CardHeader,CardContent,Typography,List,ListItem,ListItemText } from '@mui/material';
 
+// Presentational component for displaying recipe
 const Recipe = ({ name, ingredients, instructions }) => {
   return (
+    // Card component provides a visually appealing container
     <Card sx={{ maxWidth: 500, margin: 2 }}>
       <CardHeader title={name} />
       <CardContent>
         <Typography variant="h6">Ingredients:</Typography>
+        
+        {/* List of ingredients */}
         <List dense>
           {ingredients.map((item, index) => (
             <ListItem key={index} disablePadding>
@@ -15,6 +20,7 @@ const Recipe = ({ name, ingredients, instructions }) => {
           ))}
         </List>
 
+        {/* Section title for instructions */}
         <Typography variant="h6" sx={{ mt: 2 }}>Instructions:</Typography>
         <ol style={{ paddingLeft: 20 }}>
           {instructions.map((step, index) => (
@@ -29,34 +35,3 @@ const Recipe = ({ name, ingredients, instructions }) => {
 };
 
 export default Recipe;
-
-
-
-
-// import React from 'react';
-
-// const Recipe = ({ name, ingredients, instructions }) => {
-//   return (
-//     <div>
-//       <h3>{name}</h3>
-
-
-//       <h4>Ingredients:</h4>
-//       <ul>
-//         {ingredients.map((ingredient, index) => (
-//           <li key={index}>{ingredient}</li>
-//         ))}
-//       </ul>
-
-//       <h4>Instructions:</h4>
-//       <ol>
-//         {instructions.map((step, index) => (
-//           <li key={index}>{step}</li>
-//         ))}
-//       </ol>
-//     </div>
-//   );
-// };
-
-
-// export default Recipe;
